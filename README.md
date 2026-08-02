@@ -1,5 +1,3 @@
-## Hi there 👋
-
 <div align="center">
-  <img src="./jems-svg.svg" alt="Written Jems Header" width="100%" />
+  <img src="./jems-svg.svg?v=1" alt="JEMS Terminal Header" width="100%" />
 </div>
