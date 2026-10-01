@@ -46,7 +46,4 @@ GITHUB PROFILE      : https://github.com/jems-trepo
 RESEARCH DOMAIN     : Cybersecurity | Artificial Intelligence | Systems
 
 
-<div align="center">
-  <br />
-  <img src="https://komarev.com/ghpvc/?username=jems-trepo&color=38bdf8&style=flat-square&label=PROFILE_VIEWS" alt="Profile Views" />
-</div>
+
