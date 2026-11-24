@@ -41,7 +41,7 @@
 
 ### ┌── COMMUNICATIONS & NETWORK ────────────────────────────────────────┐
 
-PRIMARY EMAIL       : iam.jems.io@gmail.com
+PRIMARY EMAIL       : info@jemsyadav.com.np
 GITHUB PROFILE      : https://github.com/jems-trepo
 RESEARCH DOMAIN     : Cybersecurity | Artificial Intelligence | Systems
 
